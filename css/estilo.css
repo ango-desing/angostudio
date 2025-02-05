@@ -113,6 +113,7 @@ p {
   display: flex;
   position: relative;
   justify-content: space-around;
+  --menu-padding: 1em;
 }
 
 .nav {
@@ -168,6 +169,7 @@ p {
   display: flex;
   position: relative;
   overflow: auto;
+  margin-left: 3em;
 }
 
 .bg-panel {
@@ -194,7 +196,6 @@ p {
   padding-left: 0;
   list-style: none;
   display: flex;
-  margin-top: 3em;
 }
 
 .menu-list-item {
@@ -203,7 +204,7 @@ p {
 }
 
 .menu-link-heading {
-  text-shadow: 0px 1em 0px var(--color-neutral-200);
+  text-shadow: 0px 1em 0px #bf0d47;
 }
 
 .menu-link {
@@ -226,7 +227,7 @@ p {
   line-height: 0.75;
   transition: transform 0.55s cubic-bezier(0.65, 0.05, 0, 1);
   position: relative;
-  color: #bf0d47;
+  color: #EE6984;
 }
 
 .eyebrow {
@@ -235,12 +236,11 @@ p {
   font-family: RM Mono, Arial, sans-serif;
   font-weight: 400;
   position: relative;
-  color: #bf0d47;
+  color: #EE6984;
 }
 
 .menu-link-bg {
   z-index: 0;
-  background-color: var(--color-neutral-800);
   transform-origin: 50% 100%;
   transform-style: preserve-3d;
   transition: transform 0.55s cubic-bezier(0.65, 0.05, 0, 1);
@@ -344,6 +344,10 @@ p {
     transform: scale(1, 1);
   }
 }
+.osmo-icon-svg {
+  width: 8em;
+}
+
 @media screen and (max-width: 767px) {
   .cloneable {
     --menu-padding: 1em;
