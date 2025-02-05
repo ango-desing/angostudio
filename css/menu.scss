@@ -133,6 +133,13 @@
     inset: 0%;
   }
   
+  .imagen-fondo img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    max-width: 100%; /* Asegura que no se estire más allá del tamaño del contenedor */
+    object-fit: contain; /* Asegura que la imagen se ajuste sin distorsionarse */
+  }
+  
   .menu {
     padding-bottom: var(--menu-padding);
     grid-column-gap: 5em;
