@@ -40,60 +40,84 @@ body, html {
       width: inherit;
       position: absolute;
       left: 0;
-      top: 10px;
       z-index: 1;
     }
   }
-  .perfil{
-    background: linear-gradient(to bottom, #FBDFE7, #FEFAEF);
-    position: relative;
-    width: 100%;
-    height: 150vh;
-  }
-  .about__container{
-    display: flex;
-    flex-direction: column; /* Los elementos dentro del contenedor se apilan verticalmente */
-    align-items: center;
-    row-gap: 2rem;
-    text-align: justify;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-.about__img{
+
+
+.perfil{
+  height: 150vh;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   overflow: hidden;
-  padding-top: 5rem;
+  background: linear-gradient(to bottom, #FBDFE7, #FEFAEF);
+  padding: 30px 10vw;
+}
+.sobre-mi {
+  width: 100%; /* Asegura que ocupe el ancho completo */
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
 }
 
-.about__img img{
-   height: 500px;
+.sobre-mi img {
+  width: 50%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+  height: auto; /* Mantiene la relación de aspecto original */
+  max-width: 100%; /* Se asegura de que la imagen no se estire más allá de su tamaño original */
+  display: block; /* Elimina el espacio blanco debajo de la imagen */
+  opacity: 0; /* Inicialmente oculta para animación */
+  padding-top: 10dvh;
 }
-.sobre-mi{
 
-  min-height: 100vh;
-  width: 100%;
-  position: relative;
+/* Grid container para los elementos */
+.about__container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
-  margin: auto;
-  place-items: center;
-  img{
-    height: 300px;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  opacity: 0;
+}
+
+/* Estilos de la imagen */
+.about__img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Estilo del texto */
+.caja-texto {
+  padding: 30px;
+  border-radius: 30px;
+  background-color:#FEFAEF;
+}
+
+.about__text {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: $rosa-ango;
+  font-family: "Liter", serif;
+  padding: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .about__container {
+    grid-template-columns: 1fr;
+  }
+
+  .caja-texto {
+    padding: 10px;
   }
 }
-.about__text{
-  margin-bottom: var(--mb-4);
-  color: $rosa-ango;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-}
+
 
 .habilidades{
-  background-color: $pastel;
+  background: linear-gradient(to top, #FBDFE7, #FEFAEF);
   height: 650px;
+  width: 100%;
   h1{
     font-size: 25px;
     color: $rosa-ango;
@@ -209,9 +233,6 @@ body, html {
   
 }
   @media (max-width:900px){
-    .presentacion{
-      padding-bottom: 8rem;
-    }
     .imagen-fondo{
       height: 570px;
     }
@@ -230,10 +251,6 @@ body, html {
       row-gap: none;
       text-align: justify;
     }
-    .about__img img{
-      display: block;
-      height: 420px;
-   }
    .about__subtitle{
     text-align: center;
    }
@@ -259,9 +276,6 @@ body, html {
     }
     .about__subtitle{
       padding-top: 8rem;
-    }
-    .about__text{
-      font-family: 'Roboto', sans-serif;
     }
     .habilidades{
       background-color: $pastel;
@@ -333,9 +347,7 @@ body, html {
         display: block;
         height: 230px;
     }
-    .perfil{
-      height: 1250px;
-    }
+
     .about__container{
       padding-bottom: 1rem;
     }
@@ -351,8 +363,7 @@ body, html {
       width: inherit;
       position: absolute;
       left: 0;
-      top: 5%;
-      padding-top: 350px;
+      bottom: 10px;
     }
   }
   .sobre-mi{
@@ -363,7 +374,7 @@ body, html {
     margin-bottom: -100px;
     img{
       display: block;
-      height: 200px;
+
     }
   }
    .about__subtitle{
