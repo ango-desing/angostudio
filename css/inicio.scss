@@ -35,7 +35,6 @@ body, html {
   .beige-img{
     display: flex;
     width: 100%;
-    margin-bottom: 20px; 
     img{
       width: inherit;
       position: absolute;
@@ -46,14 +45,13 @@ body, html {
 
 
 .perfil{
-  height: 150vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   overflow: hidden;
-  background: linear-gradient(to bottom, #FBDFE7, #FEFAEF);
-  padding: 30px 10vw;
+  background: linear-gradient(to top, #FBDFE7, #FEFAEF);
+  padding: 10px 10vw;
 }
 .sobre-mi {
   width: 100%; /* Asegura que ocupe el ancho completo */
@@ -363,7 +361,7 @@ body, html {
       width: inherit;
       position: absolute;
       left: 0;
-      bottom: 10px;
+      bottom: 0;
     }
   }
   .sobre-mi{
