@@ -10,7 +10,7 @@
   font-display: swap;
 }
 body {
-  background: #FBDFE7;
+  background: linear-gradient(to bottom, #FBDFE7, #FEFAEF);
   font-family: "Raleway", sans-serif;
 }
 

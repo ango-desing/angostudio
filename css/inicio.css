@@ -22,6 +22,16 @@ body, html {
   font-family: "freaky", sans-serif;
 }
 
+.presentacion {
+  position: relative;
+  background-image: url("https://res.cloudinary.com/angoooo/image/upload/v1740094511/rvyr8kki7crxxwuspcj9.png"); /* URL de tu imagen de fondo */
+  background-size: cover; /* Para que la imagen cubra toda la sección */
+  background-position: center center; /* Para centrar la imagen */
+  background-repeat: no-repeat; /* Evitar que se repita la imagen */
+  width: 100%;
+  height: 110vh; /* Ajusta la altura según lo necesites */
+}
+
 .imagen-fondo {
   min-height: 100vh;
   width: 100%;
@@ -55,6 +65,9 @@ body, html {
   overflow: hidden;
   background: linear-gradient(to top, #FBDFE7, #FEFAEF);
   padding: 10px 10vw;
+  margin: 0px 3vw;
+  border-radius: 60px;
+  padding-bottom: 50px;
 }
 
 .sobre-mi {
@@ -69,7 +82,6 @@ body, html {
   max-width: 100%; /* Se asegura de que la imagen no se estire más allá de su tamaño original */
   display: block; /* Elimina el espacio blanco debajo de la imagen */
   opacity: 0; /* Inicialmente oculta para animación */
-  padding-top: 10dvh;
 }
 
 /* Grid container para los elementos */
@@ -91,28 +103,96 @@ body, html {
 
 /* Estilo del texto */
 .caja-texto {
-  padding: 30px;
-  border-radius: 30px;
-  background-color: #FEFAEF;
+  padding: 20px;
 }
 
 .about__text {
   font-size: 1.1rem;
   line-height: 1.5;
   color: #bf0d47;
-  font-family: "Liter", serif;
+  font-family: "Hanken Grotesk", sans-serif;
   padding: 10px;
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-  .about__container {
-    grid-template-columns: 1fr;
-  }
-  .caja-texto {
-    padding: 10px;
-  }
+.nav-wrap {
+  z-index: 100;
+  pointer-events: none;
+  justify-content: center;
+  align-items: flex-end;
+  display: flex;
+  inset: 0 0 10vh;
 }
+
+.nav-list {
+  flex-flow: row;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 0;
+  padding-left: 0;
+  display: flex;
+  font-size: 1.4vw;
+}
+
+.nav-item {
+  justify-content: center;
+  align-items: center;
+  width: 5em;
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  position: relative;
+}
+
+.nav-item.hover {
+  width: 8em;
+}
+
+.nav-item.sibling-close {
+  width: 7em;
+}
+
+.nav-item.sibling-far {
+  width: 6em;
+}
+
+.nav-item__link {
+  z-index: 1;
+  pointer-events: auto;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  display: flex;
+  position: relative;
+}
+
+.image {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+
+.nav-item__tooltip {
+  z-index: 0;
+  background-color: var(--color-neutral-100);
+  opacity: 0;
+  white-space: nowrap;
+  border-radius: 0.25em;
+  padding: 0.4em 0.5em;
+  font-size: 1em;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: absolute;
+  top: 0;
+  transform: translate(0, -80%);
+  font-weight: 400;
+}
+
+.nav-item:hover .nav-item__tooltip {
+  opacity: 1;
+  transform: translate(0px, -140%);
+}
+
 .habilidades {
   background: linear-gradient(to top, #FBDFE7, #FEFAEF);
   height: 650px;
@@ -320,7 +400,7 @@ body, html {
     font-size: 20px;
   }
 }
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 800px) {
   body {
     margin: 0;
   }
@@ -339,7 +419,16 @@ body, html {
     height: 300px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .presentacion {
+    position: relative;
+    background-image: url("https://res.cloudinary.com/angoooo/image/upload/v1740096724/jywzlp0esz59xw7yi1yx.png"); /* URL de tu imagen de fondo */
+  }
+  .perfil {
+    margin: 0px 5vw;
+    border-radius: 40px;
+    padding-bottom: 50px;
+  }
   .imagen-fondo img {
     display: block;
     height: 230px;
