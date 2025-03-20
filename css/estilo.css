@@ -215,7 +215,7 @@ p {
 }
 
 .menu-link-heading {
-  text-shadow: 0px 1em 0px #bf0d47;
+  text-shadow: 0px 1em 0px #3a3a3a;
 }
 
 .menu-link {
@@ -484,8 +484,8 @@ body, html {
   flex-direction: column;
   overflow: hidden;
   background: linear-gradient(to top, #FBDFE7, #FEFAEF);
-  padding: 10px 10vw;
-  margin: 0px 3vw;
+  padding: 8vw 10vw;
+  margin: 0px 5vw;
   border-radius: 60px;
   padding-bottom: 50px;
 }
@@ -526,6 +526,12 @@ body, html {
   padding: 20px;
 }
 
+.about__text_1 {
+  font-size: 7rem;
+  color: #bf0d47;
+  font-family: PP Neue Corp Tight, Arial, sans-serif;
+}
+
 .about__text {
   font-size: 1.1rem;
   color: #bf0d47;
@@ -544,7 +550,7 @@ body, html {
   background-size: cover;
   background-position: center;
   padding: 10px 10vw;
-  margin: 0px 3vw;
+  margin: 0px 5vw;
   border-radius: 60px;
   padding-bottom: 40px;
   padding-top: 40px;
@@ -646,85 +652,329 @@ body, html {
   transform: translate(0px, -140%);
 }
 
-.habilidades {
-  background: linear-gradient(to top, #FBDFE7, #FEFAEF);
-  height: 650px;
+.personal {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.viewport1 {
+  position: relative;
+  margin: auto;
+  height: auto;
   width: 100%;
-}
-.habilidades h1 {
-  font-size: 25px;
-  color: #bf0d47;
-  text-align: center;
-  padding-top: 6rem;
-  padding-bottom: 2rem;
-  font-family: "freaky", sans-serif;
-}
-
-.linea {
-  border: none;
-  height: 4px;
-  background: #bf0d47;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-.habilidades-galeria {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  padding-top: 100px;
-}
-
-.subhabilidad {
-  font-size: 15px;
-  color: #bf0d47;
-  padding-top: 2rem;
-  font-family: monument;
-  text-align: center;
+  justify-content: center; /* Centra horizontalmente */
   align-items: center;
 }
 
-.habi {
-  height: 280px;
+.viewport2 {
+  position: relative;
+  margin: auto;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;
 }
 
-.conocimientos {
-  background-color: #FBDFE7;
-  height: 650px;
+.card p {
+  font-family: lato;
+  margin: 0px;
+  color: black;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 90%;
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-top: 3%;
+  padding-bottom: 8%;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: ease 1s;
+  -webkit-transition: ease 1s;
 }
-.conocimientos h1 {
-  font-size: 25px;
-  color: #bf0d47;
-  padding-bottom: 2rem;
-  font-family: "freaky", sans-serif;
+
+.card h3 {
+  font-family: lato;
+  margin: 0px;
+  color: black;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 90%;
+  padding-left: 8%;
+  padding-top: 8%;
+  padding-bottom: 3%;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: ease 1s;
+  -webkit-transition: ease 1s;
+}
+
+h1 {
+  font-family: lato;
+  color: #555;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 40px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  position: relative;
   text-align: center;
 }
-.conocimientos .skills section {
-  overflow: auto;
-  margin-left: 20%;
-  margin-right: 20%;
-  padding-top: 1.4rem;
+
+.title {
+  width: 78%;
+  margin: auto;
+  padding-left: 0px;
+  padding-bottom: 0px;
 }
-.conocimientos .skills section p {
-  float: left;
-  max-width: 50%;
-  word-break: break-word;
-  margin: 0 10px;
-  color: #bf0d47;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-}
-.conocimientos .skills section span {
+
+.cards {
+  width: 90%;
+  max-width: 1440px;
+  position: relative;
   display: flex;
-  width: 15px;
-  height: 15px;
-  background: white;
-  border-radius: 15px;
-  float: right;
-  margin: 0 1.3px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
-.conocimientos .skills section span.full {
-  background: #bf0d47;
+
+.card {
+  background-color: #fc96b8;
+  border-radius: 30px;
+  width: 350px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 10px;
+  transition: 1s;
+  -webkit-transition: 0.5s;
+  cursor: pointer;
+  flex: 1 1 auto;
+}
+
+.job {
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Space between the two elements */
+}
+
+.uno {
+  flex: 1; /* Both .01 elements take equal space */
+  padding: 10px; /* Optional padding */
+}
+
+/* Estilo general de la tarjeta */
+.card {
+  position: relative; /* Asegura que el texto se pueda posicionar encima de la imagen */
+  overflow: hidden; /* Para asegurar que el texto no sobresalga del contenedor */
+  cursor: pointer; /* Para que el mouse cambie al pasar por encima */
+}
+
+/* Imagen dentro de la tarjeta */
+.img-hover-text {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-hover-text img {
+  width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
+  height: 100%; /* La imagen ocupa el 100% del alto del contenedor */
+  -o-object-fit: cover;
+     object-fit: cover; /* Mantiene la proporción y cubre el área del contenedor */
+  transition: opacity 0.3s ease;
+}
+
+/* Texto centrado dentro de la tarjeta */
+.company2 {
+  position: absolute; /* Posiciona el texto encima de la imagen */
+  top: 50%; /* Centra el texto verticalmente */
+  left: 50%; /* Centra el texto horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta el texto para que esté completamente centrado */
+  color: white; /* Color del texto */
+  opacity: 0; /* Inicia el texto invisible */
+  transition: opacity 0.3s ease; /* Transición suave para el hover */
+  text-align: center; /* Centra el texto en caso de que sea multilinea */
+  font-weight: bold; /* Hace que el texto sea más visible */
+}
+
+.company2 a {
+  color: white; /* Color del texto */
+  text-decoration: none; /* Eliminar subrayado */
+}
+
+/* Efecto hover: cuando el cursor pasa por encima de la tarjeta */
+.card:hover .company2 {
+  opacity: 1; /* Muestra el texto cuando se hace hover */
+}
+
+.card:hover .img-hover-text img {
+  opacity: 0.3; /* Opcional: hace que la imagen se opaque al hacer hover */
+}
+
+.card h2 {
+  font-size: 5em;
+  margin: auto;
+  text-align: center;
+  color: #ffffff; /* Color para el título */
+  padding-bottom: 0.5em;
+}
+
+.card p {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  color: #ffffff;
+}
+
+.card .company {
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0px;
+  padding-bottom: 0px;
+}
+
+.card .date-range {
+  font-size: 0.9em;
+  color: #eaeaea;
+  margin: 0px;
+  padding-bottom: 8px;
+}
+
+.card .job-title {
+  font-size: 1em;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0px;
+  padding-bottom: 8px;
+}
+
+.card .responsibilities {
+  margin: 0px;
+  padding-bottom: 0px;
+}
+
+.card .responsibilities ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.card .responsibilities ul li {
+  margin: 5px 0;
+}
+
+@media (min-width: 40em) {
+  .card {
+    width: 45%;
+    margin: 2.5%;
+  }
+}
+@media (min-width: 64em) {
+  .card {
+    width: 31%;
+    max-width: 31%;
+    margin: 1.13%;
+  }
+  .card:nth-child(9n-5), .card:nth-child(9n+1), .card:nth-child(9n) {
+    width: 62%;
+    max-width: 62%;
+  }
+  .card:last-of-type {
+    max-width: 31%;
+  }
+}
+.card_img {
+  width: 100%;
+  height: 20em;
+  position: reltive;
+  border-radius: 5px 5px 0px 0px;
+  background-size: cover;
+  background-position: center center;
+  background-color: #a2cac8;
+  transition: 1s;
+  -webkit-transition: 1s;
+}
+
+.title input {
+  background: transparent;
+  border: 1px solid white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  display: inline;
+  font-family: lato;
+  color: white;
+  font-size: 18px;
+  line-height: 90%;
+  border-radius: 30px;
+  width: 150px;
+  float: right;
+  margin-top: 30px;
+}
+
+.title textarea:focus, input:focus {
+  outline: none;
+}
+
+.zoomed {
+  width: 100%;
+}
+
+.fortalezas {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding-bottom: 30px;
+}
+
+.tag {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 2px solid;
+}
+
+.purple {
+  border-color: #a485fc;
+  color: #333;
+}
+
+.orange {
+  border-color: #f4a261;
+  color: #333;
+}
+
+.green {
+  border-color: #76c893;
+  color: #333;
+}
+
+.red {
+  border-color: #e63946;
+  color: #333;
+}
+
+.pink {
+  border-color: #ff66b2;
+  color: #333;
+}
+
+.blue {
+  border-color: #457b9d;
+  color: #333;
 }
 
 .contacto {
@@ -735,7 +985,7 @@ body, html {
   font-size: 16px;
   color: #e6e2e2;
   padding-top: 2rem;
-  font-family: "Raleway", sans-serif;
+  font-family: "freaky", sans-serif;
   text-align: center;
 }
 .contacto .social-media {
@@ -906,23 +1156,56 @@ body, html {
     left: 0;
     bottom: 0;
   }
+  .skills__img {
+    display: flex; /* Usamos flexbox para centrar la imagen */
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+    width: 100%; /* Asegura que el div ocupe el 100% del contenedor */
+    height: 100%; /* Asegura que el div tenga una altura del 100% del contenedor */
+  }
+  .skills__img img {
+    width: 100%; /* La imagen ocupa el 70% del tamaño del div */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    -o-object-fit: cover;
+       object-fit: cover; /* Asegura que la imagen cubra el área del contenedor sin distorsionarse */
+  }
   .about__subtitle {
     font-size: 28px;
     padding-top: 4rem;
   }
-  .about__text {
-    font-size: 12px;
-  }
-  .subhabilidad {
-    font-size: 15px;
-    color: #FBDFE7;
-    padding-top: 2rem;
-    font-family: "Roboto", sans-serif;
+  .about__text_1 {
+    font-size: 2.3rem;
+    padding: 20px;
     text-align: center;
-    align-items: center;
   }
-  .habi {
-    display: block;
-    height: 149px;
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 10px 10vw;
+    margin: 0px 5vw;
+    border-radius: 60px;
+    margin-top: 3rem;
+  }
+  .card {
+    border-radius: 40px;
+    width: 380px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    margin: 10px;
+  }
+  .card h2 {
+    line-height: 1;
+  }
+  .job {
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between the two elements */
+    flex-direction: column;
+  }
+  .uno {
+    flex: 1; /* Both .01 elements take equal space */
+    padding: 10px; /* Optional padding */
   }
 }/*# sourceMappingURL=estilo.css.map */
