@@ -21,7 +21,7 @@ body, html {
 
   .presentacion {
     position: relative;
-    background-image: url('https://res.cloudinary.com/angoooo/image/upload/v1740094511/rvyr8kki7crxxwuspcj9.png'); /* URL de tu imagen de fondo */
+    background-image: url('https://res.cloudinary.com/angoooo/image/upload/v1742494372/u5dnagig9yayw8tb0wlo.png'); /* URL de tu imagen de fondo */
     background-size: cover; /* Para que la imagen cubra toda la sección */
     background-position: center center; /* Para centrar la imagen */
     background-repeat: no-repeat; /* Evitar que se repita la imagen */
@@ -698,7 +698,7 @@ h2 {
   @media (max-width:768px){
     .presentacion {
       position: relative;
-      background-image: url('https://res.cloudinary.com/angoooo/image/upload/v1740096724/jywzlp0esz59xw7yi1yx.png'); /* URL de tu imagen de fondo */
+      background-image: url('https://res.cloudinary.com/angoooo/image/upload/v1742494529/huguq8baq9hmiqofwgqx.png'); /* URL de tu imagen de fondo */
     }
 
     .perfil{
@@ -764,20 +764,23 @@ h2 {
     flex-direction: column;
     overflow: hidden;
     padding: 10px 10vw;
-    margin: 0px 5vw;
+    margin: 0px 3vw;
     border-radius: 60px;
-    margin-top: 3rem;    
+    margin-top: 1rem;    
     
   }
   
   .card {
-    border-radius: 40px;
-    width: 380px;
-    padding-top: 55px;
-    padding-bottom: 55px;
-    margin: 10px;
+    width: 100%;
+    max-width: 320px;
+    padding: 40px 30px;
+    border-radius: 30px;
   
   }  
+
+.personal{
+  padding-top: 0;
+}
   .card h2  {
     line-height: 1;
   }
