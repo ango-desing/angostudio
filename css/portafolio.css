@@ -1,0 +1,130 @@
+.categoria {
+  height: 180px;
+}
+
+.wireframe01, .grid-container {
+  grid-column: span 2; /* Ocupa toda la fila */
+}
+
+.wireframe01 {
+  position: relative;
+  margin: auto;
+  height: 25em;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;
+  gap: 30px; /* Agrega espacio entre los elementos internos */
+  align-items: stretch;
+  padding-top: 1em;
+}
+
+.page-art {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.caja {
+  position: relative;
+  background-color: #08529C;
+  width: 90%;
+  max-width: 1200px;
+  padding: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.caja::before {
+  content: "BRANDING";
+  position: absolute;
+  top: -65px;
+  right: 0;
+  background-color: #08529C;
+  color: white;
+  padding: 20px 45px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2.4em;
+}
+
+.education {
+  background-color: #7BE595;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  width: 40%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: left;
+}
+
+.education h2 {
+  margin: 0 0 10px;
+  text-align: left;
+  color: white;
+  font-size: 2em;
+}
+
+.photo {
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.grid-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  .wireframe01 {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    height: auto;
+  }
+  .education {
+    width: 90%;
+  }
+  .education h2 {
+    font-size: 1.8em;
+  }
+  .caja {
+    grid-template-columns: 1fr;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .grid-container {
+    height: 5em;
+  }
+}/*# sourceMappingURL=portafolio.css.map */

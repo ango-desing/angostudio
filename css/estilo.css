@@ -678,7 +678,6 @@ body, html {
 }
 
 .card p {
-  font-family: lato;
   margin: 0px;
   color: black;
   font-weight: 400;
@@ -902,7 +901,6 @@ h1 {
   padding-bottom: 10px;
   padding-left: 20px;
   display: inline;
-  font-family: lato;
   color: white;
   font-size: 18px;
   line-height: 90%;
@@ -978,34 +976,29 @@ h2 {
 }
 
 .contacto {
-  background-color: #bf0d47;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 110px;
+  background-color: #EE6984; /* Ajusta el color de fondo si es necesario */
+  padding: 0 50px; /* Margen interno solo a los lados */
 }
-.contacto h2 {
-  font-size: 16px;
-  color: #e6e2e2;
-  padding-top: 2rem;
-  font-family: "freaky", sans-serif;
-  text-align: center;
-}
-.contacto .social-media {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.contacto .social-media .social-media-icons {
-  display: flex;
+
+.contact-us .brand {
   color: white;
-  align-items: center;
-  padding-top: 0.5rem;
-  margin: 0 4px;
-  position: relative;
-  font-size: 25px;
-  transition: ease-in-out 0.15s;
+  font-size: 18px;
+  text-decoration: none;
 }
-.contacto .social-media .social-media-icons:hover {
-  color: #ec9294;
+
+.social-media {
+  display: flex;
+  gap: 15px; /* Espaciado entre los iconos */
+}
+
+.social-media-icons {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 /*media querie*/
@@ -1195,6 +1188,11 @@ h2 {
     padding: 40px 30px;
     border-radius: 30px;
   }
+  .card p {
+    font-size: 14px;
+    line-height: 100%;
+    font-family: "Hanken Grotesk", sans-serif;
+  }
   .personal {
     padding-top: 0;
   }
@@ -1209,5 +1207,157 @@ h2 {
   .uno {
     flex: 1; /* Both .01 elements take equal space */
     padding: 10px; /* Optional padding */
+  }
+  .contacto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 110px;
+    background-color: #EE6984; /* Ajusta el color de fondo si es necesario */
+    padding: 0 50px; /* Margen interno solo a los lados */
+  }
+  .contact-us .brand {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  .social-media {
+    display: flex;
+    gap: 12px; /* Espaciado entre los iconos */
+  }
+  .social-media-icons {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+}
+.categoria {
+  height: 180px;
+}
+
+.wireframe01, .grid-container {
+  grid-column: span 2; /* Ocupa toda la fila */
+}
+
+.wireframe01 {
+  position: relative;
+  margin: auto;
+  height: 25em;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;
+  gap: 30px; /* Agrega espacio entre los elementos internos */
+  align-items: stretch;
+  padding-top: 1em;
+}
+
+.page-art {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.caja {
+  position: relative;
+  background-color: #08529C;
+  width: 90%;
+  max-width: 1200px;
+  padding: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.caja::before {
+  content: "BRANDING";
+  position: absolute;
+  top: -65px;
+  right: 0;
+  background-color: #08529C;
+  color: white;
+  padding: 20px 45px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2.4em;
+}
+
+.education {
+  background-color: #7BE595;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  width: 40%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: left;
+}
+
+.education h2 {
+  margin: 0 0 10px;
+  text-align: left;
+  color: white;
+  font-size: 2em;
+}
+
+.photo {
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.grid-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  .wireframe01 {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    height: auto;
+  }
+  .education {
+    width: 90%;
+  }
+  .education h2 {
+    font-size: 1.8em;
+  }
+  .caja {
+    grid-template-columns: 1fr;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .grid-container {
+    height: 5em;
   }
 }/*# sourceMappingURL=estilo.css.map */

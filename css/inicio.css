@@ -258,7 +258,6 @@ body, html {
 }
 
 .card p {
-  font-family: lato;
   margin: 0px;
   color: black;
   font-weight: 400;
@@ -482,7 +481,6 @@ h1 {
   padding-bottom: 10px;
   padding-left: 20px;
   display: inline;
-  font-family: lato;
   color: white;
   font-size: 18px;
   line-height: 90%;
@@ -558,34 +556,29 @@ h2 {
 }
 
 .contacto {
-  background-color: #bf0d47;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 110px;
+  background-color: #EE6984; /* Ajusta el color de fondo si es necesario */
+  padding: 0 50px; /* Margen interno solo a los lados */
 }
-.contacto h2 {
-  font-size: 16px;
-  color: #e6e2e2;
-  padding-top: 2rem;
-  font-family: "freaky", sans-serif;
-  text-align: center;
-}
-.contacto .social-media {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.contacto .social-media .social-media-icons {
-  display: flex;
+
+.contact-us .brand {
   color: white;
-  align-items: center;
-  padding-top: 0.5rem;
-  margin: 0 4px;
-  position: relative;
-  font-size: 25px;
-  transition: ease-in-out 0.15s;
+  font-size: 18px;
+  text-decoration: none;
 }
-.contacto .social-media .social-media-icons:hover {
-  color: #ec9294;
+
+.social-media {
+  display: flex;
+  gap: 15px; /* Espaciado entre los iconos */
+}
+
+.social-media-icons {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 /*media querie*/
@@ -775,6 +768,11 @@ h2 {
     padding: 40px 30px;
     border-radius: 30px;
   }
+  .card p {
+    font-size: 14px;
+    line-height: 100%;
+    font-family: "Hanken Grotesk", sans-serif;
+  }
   .personal {
     padding-top: 0;
   }
@@ -789,5 +787,27 @@ h2 {
   .uno {
     flex: 1; /* Both .01 elements take equal space */
     padding: 10px; /* Optional padding */
+  }
+  .contacto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 110px;
+    background-color: #EE6984; /* Ajusta el color de fondo si es necesario */
+    padding: 0 50px; /* Margen interno solo a los lados */
+  }
+  .contact-us .brand {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  .social-media {
+    display: flex;
+    gap: 12px; /* Espaciado entre los iconos */
+  }
+  .social-media-icons {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
   }
 }/*# sourceMappingURL=inicio.css.map */
