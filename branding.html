@@ -58,14 +58,14 @@
             <div class="menu-inner">
               <ul class="menu-list">
                 <li class="menu-list-item">
-                  <a href="https://angofoliostudio.com/" class="menu-link w-inline-block">
+                  <a href="index.html" class="menu-link w-inline-block">
                     <p class="menu-link-heading">Home</p>
                     <p class="eyebrow">01</p>
                     <div class="menu-link-bg"></div>
                   </a>
                 </li>
                 <li class="menu-list-item">
-                  <a href="https://angofoliostudio.com/" class="menu-link w-inline-block">
+                  <a href="branding.html" class="menu-link w-inline-block">
                     <p class="menu-link-heading">Branding</p>
                     <p class="eyebrow">02</p>
                     <div class="menu-link-bg"></div>
@@ -108,13 +108,22 @@
  <!--===== proyectos =====-->
  <div class="categoria">
  </div>
+
+
+
  <div class="page-art">
   <section class="caja">
+    <style>
+      .caja::before {
+          background-color: #08529C;
+      }
+  </style>
       <div class="wireframe01">
           <div class="education">
-            <h2 style="text-align: left;">Education</h2>
-            <p>(2018 - 2020) <br> Web and Multimedia Design <br> European Academy</p>
-            <p>(2020 - 2022) <br> Diploma in English Language</p>
+            <h2 style="text-align: left;">CALOHA</h2>
+            <p><br>caloha is a store that sells bandanas and accessories for canines, for their logo they used blue tones since their store is located in a touristic beach. </p>
+            <br>
+            <p>illustrator<br> photoshop</p>
         </div>
         <div class="photo full-width">
           <img src="https://res.cloudinary.com/angoooo/image/upload/v1689194098/qw0zg1vdw7alv9dqxkuh.png" alt="" srcset="">
@@ -132,9 +141,129 @@
             <img src="https://res.cloudinary.com/angoooo/image/upload/v1689194097/sk4epdl8dutcxqmrsoiq.png" alt="" srcset="">
           </div>
       </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const mainPhotoContainer = document.querySelector(".photo.full-width");
+    const mainPhoto = mainPhotoContainer.querySelector("img");
+    const photoElements = document.querySelectorAll(".photo:not(.full-width)");
+    
+    photoElements.forEach(photo => {
+        photo.addEventListener("click", function () {
+            let clickedImg = this.querySelector("img");
+            
+            // Agregar animación de opacidad y hacer el fondo transparente
+            mainPhotoContainer.style.transition = "opacity 0.5s ease, background-color 0.5s ease";
+            this.style.transition = "opacity 0.5s ease, background-color 0.5s ease";
+            mainPhoto.style.transition = "opacity 0.5s ease";
+            clickedImg.style.transition = "opacity 0.5s ease";
+            
+            mainPhotoContainer.style.opacity = "0";
+            this.style.opacity = "0";
+            mainPhotoContainer.style.backgroundColor = "transparent";
+            this.style.backgroundColor = "transparent";
+            
+            setTimeout(() => {
+                // Intercambiar imágenes
+                let tempSrc = mainPhoto.src;
+                mainPhoto.src = clickedImg.src;
+                clickedImg.src = tempSrc;
+                
+                mainPhotoContainer.style.opacity = "1";
+                this.style.opacity = "1";
+                mainPhotoContainer.style.backgroundColor = "transparent";
+                this.style.backgroundColor = "transparent";
+            }, 500);
+        });
+    });
+});
+      </script>
+  </section>
+</div>
+  
+ <!--===== proyectos =====-->
+ <div class="page-art">
+  <section class="caja2" style=" background-color: #d88a14;">
+    <style>
+      .caja2::before {
+          background-color: #d88a14;
+      }
+  </style>
+      <div class="wireframe01">
+          <div class="education">
+            <h2 style="text-align: left;">CALOHA</h2>
+            <p><br>caloha is a store that sells bandanas and accessories for canines, for their logo they used blue tones since their store is located in a touristic beach. </p>
+            <br>
+            <p>illustrator<br> photoshop</p>
+        </div>
+        <div class="photo2 full-width">
+          <img src="https://res.cloudinary.com/angoooo/image/upload/v1689194098/qw0zg1vdw7alv9dqxkuh.png" alt="" srcset="">
+        </div>
+      </div>
+      
+      <div class="grid-container">
+          <div class="photo2">
+            <img src="https://res.cloudinary.com/angoooo/image/upload/v1689194098/ntjy6aljegw359spdafe.png" alt="" srcset="">
+          </div>
+          <div class="photo2">
+            <img src="https://res.cloudinary.com/angoooo/image/upload/v1689194097/aywzsul44fwjxx2xxwd4.png" alt="" srcset="">
+          </div>
+          <div class="photo2">
+            <img src="https://res.cloudinary.com/angoooo/image/upload/v1689194097/sk4epdl8dutcxqmrsoiq.png" alt="" srcset="">
+          </div>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Seleccionamos el contenedor de la imagen principal
+            const mainPhotoContainer = document.querySelector(".photo2.full-width");
+            const mainPhoto = mainPhotoContainer.querySelector("img");
+    
+            // Seleccionamos todos los elementos .photo2 que no tengan la clase full-width
+            const photoElements = document.querySelectorAll(".photo2:not(.full-width)");
+    
+            // Añadimos un listener de clic a cada miniatura
+            photoElements.forEach(photo2 => {
+                photo2.addEventListener("click", function () {
+                    let clickedImg = this.querySelector("img");
+    
+                    // Agregamos animación de opacidad y hacemos el fondo transparente
+                    mainPhotoContainer.style.transition = "opacity 0.5s ease, background-color 0.5s ease";
+                    this.style.transition = "opacity 0.5s ease, background-color 0.5s ease";
+                    mainPhoto.style.transition = "opacity 0.5s ease";
+                    clickedImg.style.transition = "opacity 0.5s ease";
+    
+                    // Reducimos la opacidad mientras intercambiamos las imágenes
+                    mainPhotoContainer.style.opacity = "0";
+                    this.style.opacity = "0";
+    
+                    // Opcionalmente cambiamos el color de fondo
+                    mainPhotoContainer.style.backgroundColor = "transparent";
+                    this.style.backgroundColor = "transparent";
+    
+                    // Intercambiamos las imágenes después de la animación
+                    setTimeout(() => {
+                        // Intercambiamos las fuentes de las imágenes
+                        let tempSrc = mainPhoto.src;
+                        mainPhoto.src = clickedImg.src;
+                        clickedImg.src = tempSrc;
+    
+                        // Restauramos las opacidades
+                        mainPhotoContainer.style.opacity = "1";
+                        this.style.opacity = "1";
+    
+                        // Opcionalmente restauramos el color de fondo
+                        mainPhotoContainer.style.backgroundColor = "transparent";
+                        this.style.backgroundColor = "transparent";
+                    }, 500); // Tiempo de la animación
+                });
+            });
+        });
+    </script>
   </section>
 </div>
 
+
+<div class="categoria1">
+</div>
      <!--===== footer =====-->
 
       <footer class="contacto">
@@ -161,7 +290,38 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/barramenu.js"></script>
-    <script src="js/photo.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".caja > div", {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        stagger: 0.3,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".caja",
+            start: "top 80%", 
+            toggleActions: "play none none reverse",
+        }
+    });
+
+    gsap.from(".grid-container .photo", {
+        opacity: 0,
+        scale: 0.8,
+        duration: 1,
+        stagger: 0.2,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".grid-container",
+            start: "top 80%", 
+            toggleActions: "play none none reverse",
+        }
+    });
+});
+
+    </script>
 
 </body>
 </html>

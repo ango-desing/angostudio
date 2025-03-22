@@ -2,6 +2,10 @@
   height: 180px;
 }
 
+.categoria1 {
+  height: 50px;
+}
+
 .wireframe01, .grid-container {
   grid-column: span 2; /* Ocupa toda la fila */
 }
@@ -34,14 +38,12 @@
   max-width: 1200px;
   padding: 30px;
   border-top-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
   display: grid;
   gap: 30px;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto auto;
   padding-top: 2em;
-  padding-bottom: 2em;
+  padding-bottom: 7.2em;
 }
 
 .caja::before {
@@ -59,10 +61,39 @@
   font-size: 2.4em;
 }
 
+.caja2 {
+  position: relative;
+  background-color: #08529C;
+  width: 90%;
+  max-width: 1200px;
+  padding: 30px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto;
+  padding-top: 2em;
+  padding-bottom: 7.2em;
+}
+
+.caja2::before {
+  content: "BRANDING";
+  position: absolute;
+  top: -65px;
+  left: 0;
+  background-color: #08529C;
+  color: white;
+  padding: 20px 45px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2.4em;
+}
+
 .education {
   background-color: #7BE595;
   color: white;
-  padding: 20px;
+  padding: 50px;
   border-radius: 10px;
   font-family: Arial, sans-serif;
   width: 40%;
@@ -70,6 +101,7 @@
   justify-content: center;
   align-content: center;
   text-align: left;
+  box-sizing: border-box;
 }
 
 .education h2 {
@@ -79,7 +111,7 @@
   font-size: 2em;
 }
 
-.photo {
+.photo, .photo2 {
   background-color: white;
   border-radius: 10px;
   width: 100%;
@@ -90,7 +122,7 @@
   justify-content: center;
 }
 
-.photo img {
+.photo img, .photo2 img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -114,17 +146,39 @@
     height: auto;
   }
   .education {
-    width: 90%;
+    width: 100%;
+    height: 200px;
+    padding: 30px;
   }
   .education h2 {
-    font-size: 1.8em;
+    font-size: 1.5em;
+  }
+  .education p {
+    font-size: 12px;
   }
   .caja {
     grid-template-columns: 1fr;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
+  .caja::before {
+    content: "BRANDING";
+    position: absolute;
+    top: -46px;
+    right: 0;
+    background-color: #08529C;
+    color: white;
+    padding: 8px 20px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+  }
   .grid-container {
     height: 5em;
+  }
+  .categoria1 {
+    display: none;
   }
 }/*# sourceMappingURL=portafolio.css.map */
