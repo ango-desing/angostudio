@@ -27,13 +27,11 @@
     width: 100%;
     height: 100%;
 }
-.caja {
+.caja, .caja3, .caja5 {
     position: relative;
     background-color: #08529C;
-    width: 90%;
-    max-width: 1200px;
-    padding: 30px;
-    border-top-left-radius: 30px;
+    width: 100%;
+    padding: 60px;
     display: grid;
     gap: 30px;
     grid-template-columns: 1fr 2fr;
@@ -41,7 +39,7 @@
     padding-top: 2em;
     padding-bottom: 7.2em;
 }
-.caja::before {
+.caja::before, .caja3::before, .caja5::before {
     content: "BRANDING";
     position: absolute;
     top: -65px;
@@ -56,12 +54,11 @@
     font-size: 2.4em;
 }
 
-.caja2 {
+.caja2, .caja4 {
     position: relative;
     background-color: #08529C;
-    width: 90%;
-    max-width: 1200px;
-    padding: 30px;
+    width: 100%;
+    padding: 60px;
     display: grid;
     gap: 30px;
     grid-template-columns: 1fr 2fr;
@@ -69,7 +66,7 @@
     padding-top: 2em;
     padding-bottom: 7.2em;
 }
-.caja2::before {
+.caja2::before, .caja4::before {
     content: "BRANDING";
     position: absolute;
     top: -65px;
@@ -86,7 +83,7 @@
 
 
 .education {
-    background-color: #7BE595;
+    background-color: #fefaef00;
     color: white;
     padding: 50px;
     border-radius: 10px;
@@ -101,11 +98,15 @@
 .education h2 {
     margin: 0 0 10px;
     text-align: left;
-    color: white;
+    color: #ffffff;
     font-size: 2em;
+    font-weight: 800;
 }
-.photo, .photo2 {
-    background-color: white;
+.education p{
+    color: #ffffff;
+}
+.photo, .photo2, .photo3, .photo4,
+.photo5 {
     border-radius: 10px;
     width: 100%;
     height: 100%;
@@ -114,7 +115,8 @@
     align-items: center;
     justify-content: center;
 }
-.photo img, .photo2 img {
+.photo img, .photo2 img, .photo3 img, .photo4 img
+, .photo5 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -143,6 +145,11 @@
     }
     .education p{
         font-size: 12px;
+    }
+    .caja, .caja2, .caja3, .caja4, .caja5 {
+        padding: 20px;
+        padding-top: 2em;
+        padding-bottom: 7em;
     }
     .caja {
         grid-template-columns: 1fr;

@@ -19,7 +19,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Liter&display=swap" rel="stylesheet">
 </head>
 <body>
-  
+    <style>
+      body{
+        background: #FEFAEF;
+      }
+    </style>
     <div class="osmo-ui">
         <header class="header">
           <div class="container is--full">
@@ -112,7 +116,7 @@
 
 
  <div class="page-art">
-  <section class="caja">
+  <section class="caja" style="  border-top-left-radius: 30px;">
     <style>
       .caja::before {
           background-color: #08529C;
@@ -120,7 +124,7 @@
   </style>
       <div class="wireframe01">
           <div class="education">
-            <h2 style="text-align: left;">CALOHA</h2>
+            <h2 style="text-align: left;">Caloha</h2>
             <p><br>caloha is a store that sells bandanas and accessories for canines, for their logo they used blue tones since their store is located in a touristic beach. </p>
             <br>
             <p>illustrator<br> photoshop</p>
@@ -185,30 +189,32 @@
   <section class="caja2" style=" background-color: #d88a14;">
     <style>
       .caja2::before {
+          content: "business card";
           background-color: #d88a14;
       }
   </style>
       <div class="wireframe01">
+        <div class="photo2 full-width">
+          <img src="https://res.cloudinary.com/angoooo/image/upload/v1607453151/aea4qqgsozjckqpc1iyq.jpg" alt="" srcset="">
+        </div>
           <div class="education">
-            <h2 style="text-align: left;">CALOHA</h2>
-            <p><br>caloha is a store that sells bandanas and accessories for canines, for their logo they used blue tones since their store is located in a touristic beach. </p>
+            <h2 style="text-align: left;">cheeze</h2>
+            <p><br>business cards for a brand that wanted to offer its tour guide services with the city. </p>
             <br>
             <p>illustrator<br> photoshop</p>
         </div>
-        <div class="photo2 full-width">
-          <img src="https://res.cloudinary.com/angoooo/image/upload/v1689194098/qw0zg1vdw7alv9dqxkuh.png" alt="" srcset="">
-        </div>
+       
       </div>
       
       <div class="grid-container">
           <div class="photo2">
-            <img src="https://res.cloudinary.com/angoooo/image/upload/v1689194098/ntjy6aljegw359spdafe.png" alt="" srcset="">
+            <img src="https://res.cloudinary.com/angoooo/image/upload/v1607453165/tkihj6vgzcpeivpoi4xv.jpg" alt="" srcset="">
           </div>
           <div class="photo2">
-            <img src="https://res.cloudinary.com/angoooo/image/upload/v1689194097/aywzsul44fwjxx2xxwd4.png" alt="" srcset="">
+            <img src="https://res.cloudinary.com/angoooo/image/upload/v1607453483/itggfppus0f6icsvibin.jpg" alt="" srcset="">
           </div>
           <div class="photo2">
-            <img src="https://res.cloudinary.com/angoooo/image/upload/v1689194097/sk4epdl8dutcxqmrsoiq.png" alt="" srcset="">
+            <img src="https://res.cloudinary.com/angoooo/image/upload/v1607453162/h1kevwhnit5wthg5kxyi.jpg" alt="" srcset="">
           </div>
       </div>
       <script>
@@ -260,10 +266,232 @@
     </script>
   </section>
 </div>
-
-
-<div class="categoria1">
+ <!--===== proyectos =====-->
+<div class="page-art">
+  <section class="caja3" style="background-color: #FEFAEF;">
+    <style>
+      .caja3::before {
+          content: "logo brand";
+          background-color: #FEFAEF;
+          color: #292929;
+      }
+  </style>
+      <div class="wireframe01">
+          <div class="education">
+            <h2 style="text-align: left; color: black;">Auto Flash</h2>
+            <p style="color: black;"><br>auto flash is a car rental company in el salvador, the brand needed to redesign their logo and personal brand.</p>
+            <br>
+            <p style="color: black;">illustrator<br> photoshop</p>
+        </div>
+        <div class="photo3 full-width">
+          <img src="https://res.cloudinary.com/angoooo/image/upload/v1689195119/k61swtrlbjqc0eekiyzp.png" alt="" srcset="">
+        </div>
+      </div>
+      
+      <div class="grid-container">
+          <div class="photo3">
+            <img src="https://res.cloudinary.com/angoooo/image/upload/v1689195119/hhdzalqtikamku5xpnyn.png" alt="" srcset="">
+          </div>
+          <div class="photo3">
+            <img src="https://res.cloudinary.com/angoooo/image/upload/v1689195434/j0awvylvwza2yc6kxnyw.png" alt="" srcset="">
+          </div>
+          <div class="photo3">
+            <img src="https://res.cloudinary.com/angoooo/image/upload/v1689195395/puriyzxrgqa0f6fccoxh.png" alt="" srcset="">
+          </div>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const mainPhotoContainer = document.querySelector(".photo3.full-width");
+    const mainPhoto = mainPhotoContainer.querySelector("img");
+    const photoElements = document.querySelectorAll(".photo3:not(.full-width)");
+    
+    photoElements.forEach(photo => {
+        photo.addEventListener("click", function () {
+            let clickedImg = this.querySelector("img");
+            
+            // Agregar animación de opacidad y hacer el fondo transparente
+            mainPhotoContainer.style.transition = "opacity 0.5s ease, background-color 0.5s ease";
+            this.style.transition = "opacity 0.5s ease, background-color 0.5s ease";
+            mainPhoto.style.transition = "opacity 0.5s ease";
+            clickedImg.style.transition = "opacity 0.5s ease";
+            
+            mainPhotoContainer.style.opacity = "0";
+            this.style.opacity = "0";
+            mainPhotoContainer.style.backgroundColor = "transparent";
+            this.style.backgroundColor = "transparent";
+            
+            setTimeout(() => {
+                // Intercambiar imágenes
+                let tempSrc = mainPhoto.src;
+                mainPhoto.src = clickedImg.src;
+                clickedImg.src = tempSrc;
+                
+                mainPhotoContainer.style.opacity = "1";
+                this.style.opacity = "1";
+                mainPhotoContainer.style.backgroundColor = "transparent";
+                this.style.backgroundColor = "transparent";
+            }, 500);
+        });
+    });
+});
+      </script>
+  </section>
 </div>
+  
+<!--===== proyectos =====-->
+<div class="page-art">
+  <section class="caja4" style=" background-color: #F7928C;">
+    <style>
+      .caja4::before {
+          content: "Branding";
+          background-color: #F7928C;
+      }
+  </style>
+      <div class="wireframe01">
+        <div class="photo4 full-width">
+          <img src="https://res.cloudinary.com/angoooo/image/upload/v1689197094/ngwiymhbsq5h8wxqiyqr.png" alt="" srcset="">
+        </div>
+          <div class="education">
+            <h2 style="text-align: left;">studio blonde</h2>
+            <p><br>personal brand design for a salon specialized in ballage and blondes, they needed a more youthful and fresh logo. we used pink and orange tones to have a youthful environment. </p>
+            <br>
+            <p>illustrator<br> photoshop</p>
+        </div>
+       
+      </div>
+      
+      <div class="grid-container">
+          <div class="photo4">
+            <img src="https://res.cloudinary.com/angoooo/image/upload/v1689196809/xlt5awcphhxejh5geold.png" alt="" srcset="">
+          </div>
+          <div class="photo4">
+            <img src="https://res.cloudinary.com/angoooo/image/upload/v1689196808/hidcifgwwrgctree0pkt.png" alt="" srcset="">
+          </div>
+          <div class="photo4">
+            <img src="https://res.cloudinary.com/angoooo/image/upload/v1689196801/mif0ebkf3mnqhmzmp6wk.png" alt="" srcset="">
+          </div>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Seleccionamos el contenedor de la imagen principal
+            const mainPhotoContainer = document.querySelector(".photo4.full-width");
+            const mainPhoto = mainPhotoContainer.querySelector("img");
+    
+            // Seleccionamos todos los elementos .photo2 que no tengan la clase full-width
+            const photoElements = document.querySelectorAll(".photo4:not(.full-width)");
+    
+            // Añadimos un listener de clic a cada miniatura
+            photoElements.forEach(photo4 => {
+                photo4.addEventListener("click", function () {
+                    let clickedImg = this.querySelector("img");
+    
+                    // Agregamos animación de opacidad y hacemos el fondo transparente
+                    mainPhotoContainer.style.transition = "opacity 0.5s ease, background-color 0.5s ease";
+                    this.style.transition = "opacity 0.5s ease, background-color 0.5s ease";
+                    mainPhoto.style.transition = "opacity 0.5s ease";
+                    clickedImg.style.transition = "opacity 0.5s ease";
+    
+                    // Reducimos la opacidad mientras intercambiamos las imágenes
+                    mainPhotoContainer.style.opacity = "0";
+                    this.style.opacity = "0";
+    
+                    // Opcionalmente cambiamos el color de fondo
+                    mainPhotoContainer.style.backgroundColor = "transparent";
+                    this.style.backgroundColor = "transparent";
+    
+                    // Intercambiamos las imágenes después de la animación
+                    setTimeout(() => {
+                        // Intercambiamos las fuentes de las imágenes
+                        let tempSrc = mainPhoto.src;
+                        mainPhoto.src = clickedImg.src;
+                        clickedImg.src = tempSrc;
+    
+                        // Restauramos las opacidades
+                        mainPhotoContainer.style.opacity = "1";
+                        this.style.opacity = "1";
+    
+                        // Opcionalmente restauramos el color de fondo
+                        mainPhotoContainer.style.backgroundColor = "transparent";
+                        this.style.backgroundColor = "transparent";
+                    }, 500); // Tiempo de la animación
+                });
+            });
+        });
+    </script>
+  </section>
+</div>
+
+<!--===== proyectos =====-->
+<div class="page-art">
+  <section class="caja5" style="background-color: #1D1A1B;">
+    <style>
+      .caja5::before {
+          content: "logo brand";
+          background-color: #1D1A1B;
+      }
+  </style>
+      <div class="wireframe01">
+          <div class="education">
+            <h2 style="text-align: left; ">Grupo AF</h2>
+            <p ><br>delivery by car service agency, they needed a post for their instagram, so they used red and orange tones to give a sense of speed to the brand, as they wanted to focus on their efficiency.</p>
+            <br>
+            <p>illustrator<br> photoshop</p>
+        </div>
+        <div class="photo5 full-width">
+          <img src="https://res.cloudinary.com/angoooo/image/upload/v1689202092/jv0mowyqtlzbdeemomba.png" alt="" srcset="">
+        </div>
+      </div>
+      
+      <div class="grid-container">
+          <div class="photo5">
+            <img src="https://res.cloudinary.com/angoooo/image/upload/v1689202092/xrvwjbdmbr4qqvkcpdbx.png" alt="" srcset="">
+          </div>
+          <div class="photo5">
+            <img src="https://res.cloudinary.com/angoooo/image/upload/v1689202092/zxafahhalchsepb3b2xw.png" alt="" srcset="">
+          </div>
+          <div class="photo5">
+            <img src="https://res.cloudinary.com/angoooo/image/upload/v1689202313/jvfqp8a0aojav8tq54an.png" alt="" srcset="">
+          </div>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const mainPhotoContainer = document.querySelector(".photo5.full-width");
+    const mainPhoto = mainPhotoContainer.querySelector("img");
+    const photoElements = document.querySelectorAll(".photo5:not(.full-width)");
+    
+    photoElements.forEach(photo => {
+        photo.addEventListener("click", function () {
+            let clickedImg = this.querySelector("img");
+            
+            // Agregar animación de opacidad y hacer el fondo transparente
+            mainPhotoContainer.style.transition = "opacity 0.5s ease, background-color 0.5s ease";
+            this.style.transition = "opacity 0.5s ease, background-color 0.5s ease";
+            mainPhoto.style.transition = "opacity 0.5s ease";
+            clickedImg.style.transition = "opacity 0.5s ease";
+            
+            mainPhotoContainer.style.opacity = "0";
+            this.style.opacity = "0";
+            mainPhotoContainer.style.backgroundColor = "transparent";
+            this.style.backgroundColor = "transparent";
+            
+            setTimeout(() => {
+                // Intercambiar imágenes
+                let tempSrc = mainPhoto.src;
+                mainPhoto.src = clickedImg.src;
+                clickedImg.src = tempSrc;
+                
+                mainPhotoContainer.style.opacity = "1";
+                this.style.opacity = "1";
+                mainPhotoContainer.style.backgroundColor = "transparent";
+                this.style.backgroundColor = "transparent";
+            }, 500);
+        });
+    });
+});
+      </script>
+  </section>
+</div>
+  
      <!--===== footer =====-->
 
       <footer class="contacto">
@@ -290,38 +518,9 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/barramenu.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-    gsap.registerPlugin(ScrollTrigger);
 
-    gsap.from(".caja > div", {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        stagger: 0.3,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: ".caja",
-            start: "top 80%", 
-            toggleActions: "play none none reverse",
-        }
-    });
-
-    gsap.from(".grid-container .photo", {
-        opacity: 0,
-        scale: 0.8,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: ".grid-container",
-            start: "top 80%", 
-            toggleActions: "play none none reverse",
-        }
-    });
-});
-
-    </script>
+      
+    
 
 </body>
 </html>
