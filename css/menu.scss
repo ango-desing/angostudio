@@ -35,6 +35,11 @@
     width: 13em;
     display: flex;
   }
+  .logo.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s;
+}
   .nav-logo__wordmark {
     width: 4em;
   }

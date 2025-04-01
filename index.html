@@ -356,5 +356,16 @@
     <script src="js/biografia.js"></script>
     <script src="js/barramenu.js"></script>
     <script src="js/personal.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.querySelector(".menu-button");
+    const logo = document.querySelector(".logo");
+
+    menuButton.addEventListener("click", function () {
+        logo.classList.toggle("hidden"); // Alterna la clase para ocultar o mostrar el logo
+    });
+});
+
+    </script>
 </body>
 </html>
