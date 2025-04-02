@@ -32,20 +32,20 @@
   height: 100%;
 }
 
-.caja, .caja3, .caja5, .caja7 {
+.caja, .caja3, .caja5, .caja7, .caja9 {
   position: relative;
   background-color: #08529C;
   width: 100%;
-  padding: 60px;
+  padding: 65px;
   display: grid;
-  gap: 30px;
+  gap: 50px;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto auto;
-  padding-top: 2em;
-  padding-bottom: 7.2em;
+  padding-top: 4em;
+  padding-bottom: 10em;
 }
 
-.caja::before, .caja3::before, .caja5::before, .caja7::before {
+.caja::before, .caja3::before, .caja5::before, .caja7::before, .caja9::before {
   content: "BRANDING";
   position: absolute;
   top: -65px;
@@ -64,13 +64,13 @@
   position: relative;
   background-color: #08529C;
   width: 100%;
-  padding: 60px;
+  padding: 65px;
   display: grid;
-  gap: 30px;
+  gap: 50px;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto auto;
-  padding-top: 2em;
-  padding-bottom: 7.2em;
+  padding-top: 4em;
+  padding-bottom: 10em;
 }
 
 .caja2::before, .caja4::before, .caja6::before, .caja8::before {
