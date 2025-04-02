@@ -15,7 +15,6 @@ body {
 }
 
 .osmo-ui {
-  z-index: 0;
   pointer-events: none;
   flex-flow: column;
   justify-content: space-between;
@@ -74,7 +73,7 @@ body {
 .header {
   z-index: 110;
   padding-top: var(--gap);
-  position: fixed;
+  position: absolute;
   inset: 0% 0% auto;
 }
 
