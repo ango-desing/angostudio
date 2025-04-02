@@ -1366,12 +1366,12 @@ h2 {
 .photo img, .photo2 img, .photo3 img, .photo4 img,
 .photo5 img, .photo6 img, .photo7 img, .photo8 img {
   width: 100%;
-  height: 100%;
+  height: 12em;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.photo2.full-width, .photo3.full-width, .photo4.full-width,
+.photo.full-width, .photo2.full-width, .photo3.full-width, .photo4.full-width,
 .photo5.full-width, .photo6.full-width, .photo7.full-width, .photo8.full-width {
   max-height: 25em; /* Mantiene la altura máxima en 25em */
   /* Oculta la barra de scroll en navegadores WebKit (Chrome, Safari) */
@@ -1383,13 +1383,175 @@ h2 {
   position: relative;
 }
 
-.photo2.full-width::-webkit-scrollbar, .photo3.full-width::-webkit-,
+.photo.full-width::-webkit-scrollbar, .photo2.full-width::-webkit-scrollbar, .photo3.full-width::-webkit-,
 .photo4.full-width::-webkit-scrollbar, .photo5.full-width::-webkit-scrollbar,
 .photo6.full-width::-webkit-scrollbar, .photo7.full-width::-webkit-scrollbar, .photo8.full-width::-webkit-scrollbar {
   display: none; /* Oculta la barra en Chrome y Safari */
 }
 
-.photo2.full-width img, .photo3.full-width img,
+.photo.full-width img, .photo2.full-width img, .photo3.full-width img,
+.photo4.full-width img, .photo5.full-width img, .photo6.full-width img, .photo7.full-width img,
+.photo8.full-width img {
+  height: auto; /* Mantiene la proporción */
+  max-width: 100%; /* Evita que la imagen se desborde */
+}
+
+.grid-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  .wireframe01 {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    height: auto;
+  }
+  .education {
+    width: 100%;
+    height: 200px;
+    padding: 30px;
+  }
+  .education h2 {
+    font-size: 1.5em;
+  }
+  .education p {
+    font-size: 12px;
+  }
+  .caja, .caja2, .caja3, .caja4, .caja5 {
+    padding: 20px;
+    padding-top: 2em;
+    padding-bottom: 7em;
+  }
+  .caja {
+    grid-template-columns: 1fr;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .caja::before {
+    content: "BRANDING";
+    position: absolute;
+    top: -46px;
+    right: 0;
+    background-color: #08529C;
+    color: white;
+    padding: 8px 20px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+  }
+  .grid-container {
+    height: 5em;
+  }
+  .categoria1 {
+    display: none;
+  }
+}
+.caja, .caja3, .caja5, .caja7 {
+  position: relative;
+  background-color: #08529C;
+  width: 100%;
+  padding: 60px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto;
+  padding-top: 2em;
+  padding-bottom: 7.2em;
+}
+
+.caja::before, .caja3::before, .caja5::before, .caja7::before {
+  content: "BRANDING";
+  position: absolute;
+  top: -65px;
+  right: 0;
+  background-color: #08529C;
+  color: white;
+  padding: 20px 45px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2.4em;
+}
+
+.caja2, .caja4, .caja6, .caja8 {
+  position: relative;
+  background-color: #08529C;
+  width: 100%;
+  padding: 60px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto;
+  padding-top: 2em;
+  padding-bottom: 7.2em;
+}
+
+.caja2::before, .caja4::before, .caja6::before, .caja8::before {
+  content: "BRANDING";
+  position: absolute;
+  top: -65px;
+  left: 0;
+  background-color: #08529C;
+  color: white;
+  padding: 20px 45px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2.4em;
+}
+
+.photo1, .photo2, .photo3, .photo4,
+.photo5, .photo6, .photo7, .photo8,
+.photo01, .photo02, .photo03, .photo04, .photo05 .photo06,
+.photo07, .photo08 {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo1 img, .photo2 img, .photo3 img, .photo4 img,
+.photo5 img, .photo6 img, .photo7 img, .photo8 img,
+.photo02 img, .photo03 img, .photo04 img, .photo05 img, .photo06 img,
+.photo07 img, .photo08 img {
+  width: 100%;
+  height: 12em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.photo.full-width, .photo2.full-width, .photo3.full-width, .photo4.full-width,
+.photo5.full-width, .photo6.full-width, .photo7.full-width, .photo8.full-width {
+  max-height: 25em; /* Mantiene la altura máxima en 25em */
+  /* Oculta la barra de scroll en navegadores WebKit (Chrome, Safari) */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE y Edge */
+  overflow-y: auto; /* Permite el scroll solo en el eje Y (vertical) */
+  overflow-x: hidden;
+  display: block;
+  position: relative;
+}
+
+.photo.full-width::-webkit-scrollbar, .photo2.full-width::-webkit-scrollbar, .photo3.full-width::-webkit-,
+.photo4.full-width::-webkit-scrollbar, .photo5.full-width::-webkit-scrollbar,
+.photo6.full-width::-webkit-scrollbar, .photo7.full-width::-webkit-scrollbar, .photo8.full-width::-webkit-scrollbar {
+  display: none; /* Oculta la barra en Chrome y Safari */
+}
+
+.photo2.full-width img, .photo2.full-width img, .photo3.full-width img,
 .photo4.full-width img, .photo5.full-width img, .photo6.full-width img, .photo7.full-width img,
 .photo8.full-width img {
   height: auto; /* Mantiene la proporción */

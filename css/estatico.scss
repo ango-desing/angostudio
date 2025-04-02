@@ -1,32 +1,4 @@
-.categoria{
-    height: 180px;
-}
-.categoria1{
-    height: 50px;
-}
-.wireframe01, .grid-container {
-    grid-column: span 2; /* Ocupa toda la fila */
-}
-.wireframe01{
-    position:relative;
-    margin: auto;
-    height: 25em;
-    width:100%;
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; 
-    gap: 30px; /* Agrega espacio entre los elementos internos */
-    align-items: stretch;
-    padding-top: 1em;
-  }
 
-.page-art {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
 .caja, .caja3, .caja5, .caja7 {
     position: relative;
     background-color: #08529C;
@@ -81,32 +53,10 @@
     font-size: 2.4em;
 }
 
-
-.education {
-    background-color: #fefaef00;
-    color: white;
-    padding: 50px;
-    border-radius: 10px;
-    font-family: Arial, sans-serif;
-    width: 40%;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    text-align: left;
-    box-sizing: border-box; 
-}
-.education h2 {
-    margin: 0 0 10px;
-    text-align: left;
-    color: #ffffff;
-    font-size: 2em;
-    font-weight: 800;
-}
-.education p{
-    color: #ffffff;
-}
-.photo, .photo2, .photo3, .photo4,
-.photo5, .photo6, .photo7, .photo8{
+.photo1, .photo2, .photo3, .photo4,
+.photo5, .photo6, .photo7, .photo8,
+.photo01, .photo02, .photo03, .photo04, .photo05
+.photo06, .photo07, .photo08{
     border-radius: 10px;
     width: 100%;
     height: 100%;
@@ -115,8 +65,10 @@
     align-items: center;
     justify-content: center;
 }
-.photo img, .photo2 img, .photo3 img, .photo4 img
-, .photo5 img , .photo6 img, .photo7 img , .photo8 img{
+.photo1 img, .photo2 img, .photo3 img, .photo4 img
+, .photo5 img , .photo6 img, .photo7 img , .photo8 img,
+.photo02 img, .photo03 img, .photo04 img, .photo05 img, .photo06 img,
+.photo07 img, .photo08 img{
     width: 100%;
     height: 12em;
     object-fit: cover;
@@ -141,7 +93,7 @@
     display: none; /* Oculta la barra en Chrome y Safari */
 }
 
-.photo.full-width img ,.photo2.full-width img, .photo3.full-width img
+.photo2.full-width img ,.photo2.full-width img, .photo3.full-width img
 , .photo4.full-width img, .photo5.full-width img , .photo6.full-width img , .photo7.full-width img 
 , .photo8.full-width img{
     height: auto; /* Mantiene la proporción */
