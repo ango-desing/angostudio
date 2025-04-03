@@ -102,7 +102,13 @@
   box-sizing: border-box;
 }
 
-.education h2 {
+.education2 {
+  background-color: rgba(254, 250, 239, 0);
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.education h2, .education2 h2 {
   margin: 0 0 10px;
   text-align: left;
   color: #ffffff;
@@ -110,7 +116,7 @@
   font-weight: 800;
 }
 
-.education p {
+.education p, .education2 p {
   color: #ffffff;
 }
 
@@ -179,10 +185,10 @@
     height: 200px;
     padding: 30px;
   }
-  .education h2 {
+  .education h2, .education2 h2 {
     font-size: 1.5em;
   }
-  .education p {
+  .education p, .education2 p {
     font-size: 12px;
   }
   .caja, .caja2, .caja3, .caja4, .caja5 {

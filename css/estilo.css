@@ -1339,7 +1339,13 @@ h2 {
   box-sizing: border-box;
 }
 
-.education h2 {
+.education2 {
+  background-color: rgba(254, 250, 239, 0);
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.education h2, .education2 h2 {
   margin: 0 0 10px;
   text-align: left;
   color: #ffffff;
@@ -1347,7 +1353,7 @@ h2 {
   font-weight: 800;
 }
 
-.education p {
+.education p, .education2 p {
   color: #ffffff;
 }
 
@@ -1416,10 +1422,10 @@ h2 {
     height: 200px;
     padding: 30px;
   }
-  .education h2 {
+  .education h2, .education2 h2 {
     font-size: 1.5em;
   }
-  .education p {
+  .education p, .education2 p {
     font-size: 12px;
   }
   .caja, .caja2, .caja3, .caja4, .caja5 {
@@ -1519,51 +1525,84 @@ h2 {
   grid-column: span 2;
 }
 
+.media01 {
+  position: relative;
+  background-color: #08529C;
+  width: 100%;
+  padding: 65px;
+  padding-top: 2em;
+  padding-bottom: 7em;
+}
+
+.media01::before {
+  content: "BRANDING";
+  position: absolute;
+  top: -65px;
+  right: 0;
+  background-color: #08529C;
+  color: white;
+  padding: 20px 45px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2.4em;
+}
+
+.media02 {
+  position: relative;
+  background-color: #08529C;
+  width: 100%;
+  padding: 65px;
+  padding-top: 2em;
+  padding-bottom: 7em;
+}
+
+.media02::before {
+  position: absolute;
+  top: -65px;
+  left: 0;
+  background-color: #08529C;
+  color: white;
+  padding: 20px 45px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2.4em;
+}
+
+/* Responsivo para móviles */
 @media (max-width: 768px) {
-  .wireframe01 {
-    grid-template-columns: 1fr;
-    flex-direction: column;
-    height: auto;
+  .education2 {
+    flex-direction: column; /* Apila los elementos en pantallas pequeñas */
+    align-items: flex-start; /* Alinea los textos a la izquierda */
   }
-  .education {
-    width: 100%;
-    height: 200px;
+  .left, .right {
+    text-align: left; /* Ambos textos alineados a la izquierda */
+    margin-left: 30px; /* Mantiene el margen izquierdo */
+  }
+}
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .media01 {
     padding: 30px;
   }
-  .education h2 {
-    font-size: 1.5em;
+  .card-container-media {
+    flex-direction: column; /* Apila los elementos en vertical */
+    height: auto;
+    align-items: center;
   }
-  .education p {
-    font-size: 12px;
+  .carded {
+    width: 90%; /* Mantiene el ancho */
+    max-width: 65vh; /* Evita que sean demasiado grandes */
+    height: auto;
+    aspect-ratio: 8/1; /* Mantiene la proporción pero en vertical */
   }
-  .caja, .caja2, .caja3, .caja4, .caja5 {
-    padding: 20px;
-    padding-top: 2em;
-    padding-bottom: 7em;
-  }
-  .caja {
-    grid-template-columns: 1fr;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-  .caja::before {
-    content: "BRANDING";
-    position: absolute;
-    top: -46px;
-    right: 0;
-    background-color: #08529C;
-    color: white;
-    padding: 8px 20px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    font-size: 2em;
-  }
-  .grid-container {
-    height: 5em;
-  }
-  .categoria1 {
-    display: none;
+  .carded.active {
+    width: 90%;
+    max-width: 400px;
+    aspect-ratio: 3.8/2;
+    border-radius: 12px;
   }
 }/*# sourceMappingURL=estilo.css.map */
